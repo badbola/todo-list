@@ -1,0 +1,44 @@
+
+        <h1>To-do list</h1>
+        <div>
+                <ul>
+                        <form action="/create-task" method="post">
+                                <input type="text" name="task" placeholder="Enter task Here" required>
+                                <!-- <label for="category">Choose Category</label> -->
+                                <select name="category" required>
+                                        <option value="" selected disabled hidden> Category</option>
+                                        <option value="Personal">Personal</option>
+                                        <option value="Public">Public</option>
+                                        <option value="Work">Work</option>
+                                </select>
+                                <button type="submit">Add Task</button>
+                        </form>
+                        <!-- <form action="/delete-all/?category=<%= todo_list.category %>">
+                                <select name="category" required>
+                                        <option value="" selected disabled hidden> Category</option>
+                                        <option value="Personal">Personal</option>
+                                        <option value="Public">Public</option>
+                                        <option value="Work">Work</option>
+                                </select>
+                                <button type="submit">Add Task</button>
+                        </form> -->
+                        <% for (let i of todo_list){%>
+                                <li>
+                                        <p><%= i.task %></p>
+                                        <p><%= i.category %></p>    
+                                          
+                                        <div class="delete-button">
+                                                <a href="/delete-task/?task=<%= i.task %>">
+                                                        <i class="fas fa-trash-alt"></i>
+                                                </a>
+                                                <a href="/delete-category/?category=<%= i.category %>">
+                                                        <p>Delete Category</p>
+                                                        <i class="fas fa-trash-alt"></i>
+                                                </a>
+                                        </div>
+                                </li>
+                        <%}%>
+                        
+                </ul>
+        </div>
+        
