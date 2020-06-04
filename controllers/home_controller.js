@@ -41,12 +41,13 @@ module.exports.create = function(req,res){
     
 };
 module.exports.deleteTask = function(req,res){
-    let task = req.query.task;
+    let taskdel = req.query.task;
 
-    Todo.findOneAndDelete(task, function(err){
+    Todo.findOneAndDelete({task: taskdel}, function(err){
         if(err){console.log(`Cannot delete contact ${err}`); return;}
         return res.redirect('back');
     });
+
 };
 module.exports.deleteCategory = function(req,res){
     let categ = req.query.category;

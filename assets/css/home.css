@@ -1,0 +1,124 @@
+body{
+    background-color: black;
+    color: white;
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+#main-head{
+    font-size: 3rem;
+}
+#main-content{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-image: linear-gradient(45deg,rgba(255,255,255,0.6),rgba(128,128,128,0.6));
+    width: 50%;
+    padding: 2rem;
+    border-radius: 2rem; */
+}
+#form-enter{
+    display: flex;
+    align-items: center;
+}
+input.form-icon{
+    font-family:  'Comfortaa';
+}
+input[type=text]{
+    background-color: black;
+    border: none;
+    font-family: 'Comfortaa',fontAwesome;
+    color: white;
+    border-radius: 3rem;
+    height: 4rem;
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 10px;
+    transition: all ease-in-out 0.3s;
+}
+input[name=task]{
+    width: 30rem;  
+}
+input[name=category]{
+    width: 15rem;
+}
+input[type=text]:hover{
+    box-shadow: 0 0 10px 4px grey;
+    transition: all ease-in 0.3s;
+}
+input[type=text]:focus{
+    outline: none;
+    background-color: white;
+    color: black;
+    transition: all ease-in-out 0.5s;
+}
+#submit{
+    background-color: transparent;
+    color: white;
+    border: 3px solid white;
+    font-family: 'Comfortaa';
+    width: 3rem;
+    height: 3rem;
+    padding: 5px;
+    font-size: 1.5rem;
+    margin: 10px;
+    border-radius: 50%;
+}
+#submit:hover{
+    background-color: white;
+    color: black;
+    border: 3px solid black;
+    box-shadow: 0 0 10px 4px grey;
+    transition: all ease-in-out 0.5s;
+}
+li{
+    display: flex;
+    background-color: tomato;
+    width: 45rem;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 6px 8px;
+    font-size: 1.5rem;
+    margin: 5px;
+    word-wrap: break-word;
+    text-align: left;
+    transition: all ease-in-out 0.5s;
+}
+li:hover{
+    transform: scale(1.2);
+    transition: all ease-in-out 0.5s;
+}
+.task-display{
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    align-items: center;
+}
+.task-design{
+    width: 75%;
+}
+.category-design{
+    width: 25%;
+    padding: 5px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.delete-button{
+    display: flex;
+    align-items: center;
+    font-size: medium;
+    text-align: right;
+}
+.delete-button a{
+    text-decoration: none;
+    color: white;
+}
