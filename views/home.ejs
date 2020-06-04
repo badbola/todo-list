@@ -4,7 +4,7 @@
                 <ul>
                         <form action="/create-task" method="post" id="create-task">
                                 <div id="form-enter">
-                                        <input type="text" name="task" class="form-icon" placeholder="&#xf0ae; Enter task Here" required>
+                                        <input type="text" name="task" class="form-icon" placeholder="&#xf044; Enter task Here" required>
                                         <!-- <label for="category">Choose Category</label> -->
                                         <!-- <select name="category" class="decorated" required>
                                                 <option value="" selected disabled hidden> Category</option>
@@ -26,9 +26,9 @@
                                 <button type="submit">Add Task</button>
                         </form> -->
                         <% for (let i of todo_list){%>
-                                <li>
+                                <li id="<%= i._id%>" onclick="complete_task(`<%= i._id%>`)" >
                                         <div class="task-display">
-                                                <p class="task-design"><%= i.task %></p>
+                                                <p class="task-design"> <%= i.task %></p>
                                         <p class="category-design" 
                                          <% if(i.category == "Work"||i.category == "work"){%>
                                                  style="background-color: aqua" 
@@ -47,10 +47,10 @@
                                                         <i class="fas fa-trash-alt"></i>
                                                 </a>
                                                 <br>
-                                                <a href="/delete-category/?category=<%= i.category %>">
+                                                <a class="delete-cat" href="/delete-category/?category=<%= i.category %>">
                                                         <p>
-                                                                Delete Category
-                                                                <i class="fas fa-trash-alt"></i>
+                                                                Delete <%= i.category %> Category
+                                                                
                                                         </p>
                                                 </a>
                                         </div>
@@ -59,4 +59,12 @@
                         
                 </ul>
         </div>
+        <div id="footer">
+                <p>Designed and developed by <strong>Divyanshu Singh</strong> </p>
+                <p>
+                        <a href="https://www.facebook.com/thebadbola" target="blank"><i class="fab fa-facebook"></i></a>
+                        <a href="http://www.linkedin.com/in/divyanshu-singh-3b38a910b/" target="blank"> <i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/badbola/" target="blank"><i class="fab fa-instagram"></i></a>
+                </p>
         
+        </div>
